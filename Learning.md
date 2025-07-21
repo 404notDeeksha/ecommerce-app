@@ -19,5 +19,9 @@
 - Removes duplication of folders( consolidated node_modules)
 - makes app scalable, central management of dependencies
 
+so,
+- Put both fe & be apps into single /apps folder
 - Added .gitignore in root project directory
-- Added package.json with script to sun both FE & BE concurrently
+- Added package.json with shared dependencies & dev_dependencies.
+- npm init to load centralised node_modules in app.
+
