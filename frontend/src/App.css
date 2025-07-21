@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .hover-header {
+    @apply hover:border-white border-transparent border-[1px];
+  }
+ 
+  .arrow-carousel {
+    @apply w-20 h-full max-h-[250px] absolute top-[100px] cursor-pointer z-[50] pl-[3px] visible;
+  }
+ 
+   
+
+  .shopContent {
+    @apply w-full max-w-[1480px] px-2.5 ms-auto me-auto;
+  }
+
+  .slider {
+    @apply max-w-[1500px]  mx-auto  max-h-[300px] overflow-visible;
+  }
+
+  .carousel-container{
+    @apply custom-scrollbar relative flex gap-3 overflow-auto scroll-smooth snap-x snap-mandatory touch-pan-x z-0 pb-3.5
+  }
+
+  .carousel-swipe {
+    @apply hover:bg-white transition-all duration-300 absolute top-[900px] w-12 h-24 cursor-pointer;
+  }
+  .carousel-swipe-arrow {
+    @apply z-[5] mt-9 ml-3;
+  }
+
+
+  .amazon-logo{
+    @apply flex  cursor-pointer hover-header pb-2.5
+    laptop:ml-2 tablet:ml-1         
+    laptop:mr-[1px] laptop:my-[1px]
+    laptop:pl-[26px] pr-2 pt-[5px] p-[10px_40px_0px_0px]
+    mobile:pt-[0px]
+  }
+
+  .amazon-logo-image{
+    @apply object-contain 
+    h-[30px] min-h-[27px] 
+    w-[97px]
+     laptop:min-w-[97px] mobile:min-w-20 tablet:min-w-20 mobile:h-[27px]
+     mt-[12px] scale-95
+  }
+
+  .amazon-logo-in{
+    @apply text-[13.5px] font-[500] text-white mt-[12px] mobile:mt-[10px] ml-[1px] 
+  }
+}
+
+body {
+  background-color: #e3e6e6;
+  display: block;
+}
+.mask-image {
+  background: linear-gradient(-180deg, rgba(234, 237, 237, 0), #e3e6e6);
+}
+.custom-scrollbar {
+  overscroll-behavior-inline: contain;
+}
+.custom-scrollbar::-webkit-scrollbar {
+  height: 7px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.modal-zindex-fullScreen{
+  z-index:6;
+}
+.modal-zindex-navbarTop{
+  z-index:4
+}
+.modal-zindex-navbarFull{
+  z-index:2
+}
+
+/* :hover */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 4px;
+  cursor: pointer;
+}
