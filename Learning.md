@@ -6,16 +6,16 @@
 - Upload all local m/c data to new Github Repo
 
 **Issue #1**
-- **.DS_Store file got automatically created on Github repo root folder.
+- .DS_Store file got automatically created on Github repo root folder.
 - $$ Put it in .gitignore file
 - $$ Removed the folder
 
 **Issue #2**
-- ** backend folder in github repo is unresponsive
+-  backend folder in github repo is unresponsive
 - $ It is because backend folder is still recognised as git repo by github
 - $$ Removed .git repo from backend folder & re-added it as normal folder
 
-**Monorepo Structure**
+### Monorepo Structure**
 - Removes duplication of folders( consolidated node_modules)
 - makes app scalable, central management of dependencies
 
@@ -41,3 +41,9 @@ so,
 - mongodb_url needs to be locally updated with credentials for connection.
 
 - start both be & fe development locally
+
+**Issue #6**
+- fe isnt working
+- $$ Deleted package-lock.json of both fe & be , node_modules & package-lock.json of root directory.
+- Reinstalled node_modules & package-lock.json of root directory
+
