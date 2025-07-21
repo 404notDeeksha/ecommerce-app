@@ -1,10 +1,14 @@
 {
-    "private": true,
-    "workspaces": [
-      "apps/*"
-    ],
-    "devDependencies": {
-      "eslint-plugin-react": "^7.37.5"
-    }
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "devDependencies": {
+    "eslint-plugin-react": "^7.37.5"
+  },
+  "scripts": {
+    "start:backend": "npm --workspace apps/backend start",
+    "start:frontend": "npm --workspace apps/frontend start",
+    "dev:all": "npm-run-all -p start:backend start:frontend"
   }
-  
+}

@@ -25,3 +25,13 @@ so,
 - Added package.json with shared dependencies & dev_dependencies.
 - npm init to load centralised node_modules in app.
 
+### Starting both FE & BE in Development mode
+
+**Issues #3**
+- FE initial setup of package.json is via vite & has "dev":"vite" instaed of "start":"vite". 
+- $$ This Needed change.
+- Also, FE .env doesnt has BE url mentioned explicitly, needed updation.
+
+**Issues #4**
+- Backend app isnt able to load its .env essential variables.
+- $$
