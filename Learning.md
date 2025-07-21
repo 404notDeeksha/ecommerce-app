@@ -35,3 +35,6 @@ so,
 **Issues #4**
 - Backend app isnt able to load its .env essential variables.
 - $$
+
+**Issues #5**
+- mongodb_url needs to be locally updated with credentials for connection
