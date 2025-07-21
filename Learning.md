@@ -34,7 +34,10 @@ so,
 
 **Issues #4**
 - Backend app isnt able to load its .env essential variables.
-- $$
+- $$ create new .env file & write all necessary links
+- It is because of tests file
 
 **Issues #5**
-- mongodb_url needs to be locally updated with credentials for connection
+- mongodb_url needs to be locally updated with credentials for connection.
+
+- start both be & fe development locally
