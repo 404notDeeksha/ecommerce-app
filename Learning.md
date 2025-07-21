@@ -15,3 +15,9 @@
 - $ It is because backend folder is still recognised as git repo by github
 - $$ Removed .git repo from backend folder & re-added it as normal folder
 
+**Monorepo Structure**
+- Removes duplication of folders( consolidated node_modules)
+- makes app scalable, central management of dependencies
+
+- Added .gitignore in root project directory
+- Added package.json with script to sun both FE & BE concurrently
