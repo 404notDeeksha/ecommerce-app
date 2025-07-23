@@ -10,5 +10,9 @@
     "start:backend": "npm --workspace apps/backend start",
     "start:frontend": "npm --workspace apps/frontend start",
     "dev:all": "npm-run-all -p start:backend start:frontend"
+  },
+  "dependencies": {
+    "ogl": "^1.0.11",
+    "three": "^0.178.0"
   }
 }

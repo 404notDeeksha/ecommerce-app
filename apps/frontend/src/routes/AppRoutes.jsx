@@ -24,8 +24,8 @@ export const AppRoutes = () => {
           path="/"
           element={
             <>
-              <MainHeader />
-              <SecondaryHeader />
+              {/* <MainHeader /> */}
+              {/* <SecondaryHeader /> */}
               <Outlet />
               <Footer />
             </>

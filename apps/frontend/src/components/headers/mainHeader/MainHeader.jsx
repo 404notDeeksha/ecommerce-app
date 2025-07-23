@@ -10,7 +10,7 @@ import { routes } from "../../../routes/routes";
 
 export const MainHeader = () => {
   return (
-    <div className="h-[60px] bg-amazon_blue border-0 p-0 m-0 flex justify-evenly relative z-[5]">
+    <div className="h-[60px] bg-black border-0 p-0 m-0 flex justify-evenly relative z-[5]">
       <Link to={routes.home}>
         <AmazonLogo />
       </Link>

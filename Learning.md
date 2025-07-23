@@ -1,4 +1,4 @@
-
+# Mono Repo app
 
 - Setting up individual FE & BE repo to craete combined full stack app.
 - create a new local m/c folder & git clone both repo in it.
@@ -39,11 +39,23 @@ so,
 
 **Issues #5**
 - mongodb_url needs to be locally updated with credentials for connection.
-
 - start both be & fe development locally
 
 **Issue #6**
 - fe isnt working
 - $$ Deleted package-lock.json of both fe & be , node_modules & package-lock.json of root directory.
 - Reinstalled node_modules & package-lock.json of root directory
+
+**Issue #7**
+- $$ missed username, password of mongodb account
+- recovered from env variables of vercel deployement
+
+**Deciding Theme of Website:-**
+- Ai tech Gadgets Store
+
+**Lets Change Frontend First**
+- Changed Logo
+- Changed Site Name
+- Change Wallpaper
+
 

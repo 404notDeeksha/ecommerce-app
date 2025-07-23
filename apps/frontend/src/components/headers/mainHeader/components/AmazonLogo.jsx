@@ -6,9 +6,9 @@ export const AmazonLogo = () => {
       <img
         src={images.logo}
         alt="amazon-logo"
-        className={`amazon-logo-image`}
+        className={`amazon-logo-image `}
       />
-      <span className={`amazon-logo-in`}>.in</span>
+      <span className={`amazon-logo-in text-white text-xl`}>GAiget</span>
     </div>
   );
 };
