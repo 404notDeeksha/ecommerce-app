@@ -27,7 +27,7 @@ export const AppRoutes = () => {
               {/* <MainHeader /> */}
               {/* <SecondaryHeader /> */}
               <Outlet />
-              <Footer />
+              {/* <Footer /> */}
             </>
           }
         >

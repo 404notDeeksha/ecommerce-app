@@ -54,8 +54,20 @@ so,
 - Ai tech Gadgets Store
 
 **Lets Change Frontend First**
+
+***Sitewide***
 - Changed Logo
+
+***HomePage***
 - Changed Site Name
 - Change Wallpaper
+- Positioned Searchbar on its Top
+- Positioned Hero Text in center
+- Decided to keep Home Page as Splash page
+- Changed Font of HeroText
+- Made this page responsive
+
+
+
 
 

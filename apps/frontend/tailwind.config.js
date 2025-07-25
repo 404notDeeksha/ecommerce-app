@@ -16,11 +16,14 @@ export default {
         footerBg: "#232F3E",
         blackTransparent: "rgba(0, 0, 0, 0.5)",
       },
+      fontFamily: {
+        anta: ['"Anta"', "sans-serif"], // Ensure correct capitalization and quotes for "Anta"
+      },
     },
     screens: {
-      mobile: { max: "640px" },
+      sm: { max: "640px" },
       tablet: { min: "641px", max: "1024px" },
-      laptop: { min: "1025px" },
+      lg: { min: "1025px" },
     },
   },
   variants: {
