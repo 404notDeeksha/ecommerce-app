@@ -27,7 +27,7 @@ export function HeroTextCentered() {
           className="px-5 py-2 rounded-full bg-white text-[#1d1e2c] font-semibold shadow hover:bg-gray-200 transition text-lg"
           aria-label="Get Started"
         >
-          <Link to={routes.loginEmail}>Get Started</Link>
+          <Link to={routes.signup}>Get Started</Link>
         </button>
         <button
           className="px-5 py-2 rounded-full bg-[#262736] border border-[#3b3c51] text-white font-semibold shadow text-lg"

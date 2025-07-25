@@ -64,6 +64,7 @@ so,
 - Positioned Searchbar on its Top
 - Positioned Hero Text in center
 - Decided to keep Home Page as Splash page
+***Splash Page***
 - Changed Font of HeroText
 - Made this page responsive
 
@@ -72,6 +73,9 @@ so,
 - Creating new route page is working
 - Even url is getting converted to /home page url
 - $$ Beacuse user was logged in
+
+***Signup Page***
+- Updated complete UI
 
 
 

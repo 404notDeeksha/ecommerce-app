@@ -107,20 +107,16 @@ export const Signup = () => {
       />
 
       <div className="absolute inset-0 flex items-center justify-center z-10 px-4">
-        <div className="w-full max-w-lg p-8 bg-[#23213c]/60 backdrop-blur rounded-xl border border-[#5b4e89] shadow-xl text-[#b084f7]">
+        <div className="w-full max-w-lg py-8 px-10 bg-[#23213c]/60 backdrop-blur rounded-xl border border-[#5b4e89] shadow-xl text-[#b084f7]">
           <div className="flex flex-row items-center gap-4 mb-8">
-            <img
-              src={images.logo}
-              className="w-16 sm:mx-0"
-              alt="Logo"
-            />
+            <img src={images.logo} className="w-16 sm:mx-0" alt="Logo" />
             <h1 className="font-anta text-4xl sm:text-5xl text-center sm:text-left">
               GAiget
             </h1>
           </div>
 
           <form
-            className="flex flex-col gap-y-4 my-2 text-white"
+            className="flex flex-col gap-y-4  my-2 text-white"
             onSubmit={handleSubmit}
           >
             {/* Name */}
