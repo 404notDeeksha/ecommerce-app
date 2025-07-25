@@ -35,7 +35,7 @@
 
   .amazon-logo{
     @apply flex  cursor-pointer hover-header pb-2.5
-    lg:ml-2 tablet:ml-1         
+    lg:ml-2 md:ml-1         
     lg:mr-[1px] lg:my-[1px]
     lg:pl-[26px] pr-2 pt-[5px] p-[10px_40px_0px_0px]
     sm:pt-[0px]
@@ -45,7 +45,7 @@
     @apply object-contain 
     h-[30px] min-h-[27px] 
     w-[97px]
-     lg:min-w-[97px] sm:min-w-20 tablet:min-w-20 sm:h-[27px]
+     lg:min-w-[97px] sm:min-w-20 md:min-w-20 sm:h-[27px]
      mt-[12px] scale-95
   }
 

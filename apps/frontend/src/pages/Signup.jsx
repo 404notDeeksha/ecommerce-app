@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { LogoBlack } from "./login/LogoBlack";
 import { RiArrowDropRightFill } from "react-icons/ri";
 import { useDispatch, useSelector } from "react-redux";
 import { signupUser } from "../api/auth";
@@ -10,7 +9,8 @@ import { loginSuccess } from "../redux/slices/authSlice";
 import { routes } from "../routes/routes";
 import { loading } from "../redux/slices/loaderSlice";
 import { LoaderData } from "../utils/common-components";
-
+import Squares from "../utils/Squares";
+import { images } from "../assets/images";
 
 export const Signup = () => {
   const [formData, setFormData] = useState({
@@ -96,129 +96,142 @@ export const Signup = () => {
     }
   };
   return (
-    <>
-      <div className="bg-white h-screen text-black">
-        <div className="pt-3.5 px-[18px] pb-[22px]">
-          <LogoBlack />
-          <div className="rounded-lg border border-[#ddd] p-6 mb-[22px] w-[350px] m-auto text-xs ">
-            <h1 className="font-normal mb-6 text-[28px] ">Create Account</h1>
+    <div className="relative w-screen h-screen bg-[#1d1e2c] overflow-hidden">
+      <Squares
+        speed={0.5}
+        squareSize={50}
+        direction="diagonal"
+        borderColor="#3b3c51"
+        hoverFillColor="#02a9f7"
+        className="absolute inset-0 w-full h-full z-0"
+      />
 
-            <form
-              className="flex flex-col gap-y-4 my-2"
-              onSubmit={handleSubmit}
-            >
-              <div className="flex flex-col gap-y-1">
-                <label className="block font-bold ">Your name</label>
-                <input
-                  type="text"
-                  name="name"
-                  className="w-full p-2 border-2 border-black border-solid"
-                  placeholder="First and last name"
-                  required
-                  value={formData.name}
-                  onChange={handleChange}
-                />
-                {errors.name && (
-                  <p className="text-red-500 text-sm">{errors.name}</p>
-                )}
-              </div>
-
-              <div className="flex flex-col gap-y-1">
-                <label className="font-bold">Email</label>
-
-                <input
-                  type="email"
-                  name="email"
-                  className="w-full p-2 border-2 border-black border-solid"
-                  value={formData.email}
-                  required
-                  onChange={handleChange}
-                />
-
-                {errors.email && (
-                  <p className="text-red-500 text-sm">{errors.email}</p>
-                )}
-              </div>
-
-              <div className="flex flex-col gap-y-1">
-                <label className="block font-bold">Password</label>
-                <div className="relative">
-                  <input
-                    type={showPassword ? "text" : "password"}
-                    name="password"
-                    className="w-full p-2 border-2 border-black border-solid"
-                    placeholder="At least 6 characters"
-                    value={formData.password}
-                    required
-                    onChange={handleChange}
-                  />
-                  <button
-                    type="button"
-                    onClick={togglePasswordVisibility}
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2"
-                    aria-label={
-                      showPassword ? "Hide password" : "Show password"
-                    }
-                  >
-                    {showPassword ? <FaRegEyeSlash /> : <FiEye />}
-                  </button>
-                </div>
-                {passwordStrength && (
-                  <p
-                    className={`text-sm ${
-                      passwordStrength === "Strong"
-                        ? "text-green-500"
-                        : "text-red-500"
-                    }`}
-                  >
-                    {passwordStrength}
-                  </p>
-                )}
-              </div>
-              <div className="flex flex-col gap-y-1">
-                <label className="font-bold block">Confirm Password</label>
-                <input
-                  type="password"
-                  name="confirmPassword"
-                  className="w-full p-2 border-2 border-black border-solid"
-                  value={formData.confirmPassword}
-                  onChange={handleChange}
-                  required
-                />
-                {errors.confirmPassword && (
-                  <p className="text-red-500 text-sm">
-                    {errors.confirmPassword}
-                  </p>
-                )}
-              </div>
-
-              <button
-                type="submit"
-                className="bg-[#FFD814] text-xs p-2 rounded-lg w-full my-4 "
-              >
-                Create your amazon account
-              </button>
-            </form>
-
-            <div className="my-5 text-xs">
-              By creating an account or logging in, you agree to Amazon’s
-              Conditions of Use and Privacy Policy.
-            </div>
-
-            <div className="my-2 flex">
-              Already have an account?
-              <div className="text-[#0066c0] flex flex-row gap-2">
-                <Link to={routes.loginEmail} className="ml-2">
-                  Sign in
-                </Link>
-                <RiArrowDropRightFill className="text-[20px]" />
-              </div>
-            </div>
+      <div className="absolute inset-0 flex items-center justify-center z-10 px-4">
+        <div className="w-full max-w-lg p-8 bg-[#23213c]/60 backdrop-blur rounded-xl border border-[#5b4e89] shadow-xl text-[#b084f7]">
+          <div className="flex flex-row items-center gap-4 mb-8">
+            <img
+              src={images.logo}
+              className="w-16 sm:mx-0"
+              alt="Logo"
+            />
+            <h1 className="font-anta text-4xl sm:text-5xl text-center sm:text-left">
+              GAiget
+            </h1>
           </div>
 
-          <LoaderData isLoading={isLoading} />
+          <form
+            className="flex flex-col gap-y-4 my-2 text-white"
+            onSubmit={handleSubmit}
+          >
+            {/* Name */}
+            <div className="flex flex-col gap-y-1">
+              <label className="block font-bold">Your name</label>
+              <input
+                type="text"
+                name="name"
+                className="w-full p-2 rounded-xl border-2 border-[#b084f7]/50 placeholder:text-white/70"
+                placeholder="First and last name"
+                required
+                value={formData.name}
+                onChange={handleChange}
+              />
+              {errors.name && (
+                <p className="text-red-500 text-sm">{errors.name}</p>
+              )}
+            </div>
+
+            {/* Email */}
+            <div className="flex flex-col gap-y-1">
+              <label className="font-bold">Email</label>
+              <input
+                type="email"
+                name="email"
+                className="w-full p-2 rounded-xl border-2 border-[#b084f7]/50 placeholder:text-white/70"
+                placeholder="your.email@example.com"
+                required
+                value={formData.email}
+                onChange={handleChange}
+              />
+              {errors.email && (
+                <p className="text-red-500 text-sm">{errors.email}</p>
+              )}
+            </div>
+
+            {/* Password */}
+            <div className="flex flex-col gap-y-1">
+              <label className="block font-bold">Password</label>
+              <div className="relative">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  name="password"
+                  className="w-full p-2 rounded-xl border-2 border-[#b084f7]/50 placeholder:text-white/70"
+                  placeholder="At least 8 characters"
+                  required
+                  value={formData.password}
+                  onChange={handleChange}
+                />
+                <button
+                  type="button"
+                  onClick={togglePasswordVisibility}
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#b084f7]"
+                  aria-label={showPassword ? "Hide password" : "Show password"}
+                >
+                  {showPassword ? <FaRegEyeSlash /> : <FiEye />}
+                </button>
+              </div>
+              {passwordStrength && (
+                <p
+                  className={`text-sm ${
+                    passwordStrength === "Strong"
+                      ? "text-green-500"
+                      : "text-red-500"
+                  }`}
+                >
+                  {passwordStrength}
+                </p>
+              )}
+            </div>
+
+            {/* Confirm Password */}
+            <div className="flex flex-col gap-y-1">
+              <label className="font-bold block">Confirm Password</label>
+              <input
+                type="password"
+                name="confirmPassword"
+                className="w-full p-2 rounded-xl border-2 border-[#b084f7]/50 placeholder:text-white/70"
+                required
+                value={formData.confirmPassword}
+                onChange={handleChange}
+              />
+              {errors.confirmPassword && (
+                <p className="text-red-500 text-sm">{errors.confirmPassword}</p>
+              )}
+            </div>
+
+            {/* Submit Button */}
+            <button
+              type="submit"
+              className="w-full px-4 py-2 rounded-lg border border-[#b084f7] text-[#b084f7] bg-transparent hover:bg-[#b084f7] hover:text-white transition focus:outline-none focus:ring-2 focus:ring-[#b084f7]"
+            >
+              Create Account
+            </button>
+          </form>
+
+          {/* Sign In Link */}
+          <div className="mt-4 flex items-center justify-center sm:justify-start">
+            Already have an account?
+            <Link
+              to={routes.loginEmail}
+              className="text-[#b084f7] ml-2 flex items-center gap-1 hover:underline"
+            >
+              Sign in <RiArrowDropRightFill className="text-lg" />
+            </Link>
+          </div>
         </div>
       </div>
-    </>
+
+      {/* Global Loader */}
+      <LoaderData isLoading={isLoading} />
+    </div>
   );
 };

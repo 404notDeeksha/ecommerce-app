@@ -22,7 +22,7 @@ export default {
     },
     screens: {
       sm: { max: "640px" },
-      tablet: { min: "641px", max: "1024px" },
+      md: { min: "641px", max: "1024px" },
       lg: { min: "1025px" },
     },
   },

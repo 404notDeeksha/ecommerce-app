@@ -1,4 +1,5 @@
 export const routes = {
+  splash: "/splash",
   signup: "/signup",
   loginEmail: "/login/email",
   loginPassword: "/login/password",

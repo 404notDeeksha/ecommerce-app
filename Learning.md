@@ -67,6 +67,13 @@ so,
 - Changed Font of HeroText
 - Made this page responsive
 
+**Issues #8**
+- No route page is working
+- Creating new route page is working
+- Even url is getting converted to /home page url
+- $$ Beacuse user was logged in
+
+
 
 
 

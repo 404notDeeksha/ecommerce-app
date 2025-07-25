@@ -12,10 +12,12 @@ import { EmailAuthPage } from "../pages/login/EmailAuthPage";
 import { ProtectedRoute } from "./ProtectedRoute";
 import { routes } from "./routes";
 import { NotFound } from "../components/NotFound";
+import { SplashPage } from "../pages/splashpage/SplashPage";
 
 export const AppRoutes = () => {
   return (
     <Routes>
+      <Route path={routes.splash} element={<SplashPage />} />
       <Route path={routes.signup} element={<Signup />} />
       <Route path={routes.loginEmail} element={<EmailAuthPage />} />
       <Route path={routes.loginPassword} element={<PasswordAuthPage />} />
