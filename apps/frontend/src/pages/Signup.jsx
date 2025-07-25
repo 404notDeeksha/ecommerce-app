@@ -106,7 +106,7 @@ export const Signup = () => {
         className="absolute inset-0 w-full h-full z-0"
       />
 
-      <div className="absolute inset-0 flex items-center justify-center z-10 px-4">
+      <div className="absolute inset-0 flex items-center justify-center z-10 px-4 pointer-events-none">
         <div className="w-full max-w-lg py-8 px-10 bg-[#23213c]/60 backdrop-blur rounded-xl border border-[#5b4e89] shadow-xl text-[#b084f7]">
           <div className="flex flex-row items-center gap-4 mb-8">
             <img src={images.logo} className="w-16 sm:mx-0" alt="Logo" />
@@ -116,7 +116,7 @@ export const Signup = () => {
           </div>
 
           <form
-            className="flex flex-col gap-y-4  my-2 text-white"
+            className="flex flex-col gap-y-4  my-2 text-white pointer-events-auto"
             onSubmit={handleSubmit}
           >
             {/* Name */}
@@ -125,8 +125,7 @@ export const Signup = () => {
               <input
                 type="text"
                 name="name"
-                className="w-full p-2 rounded-xl border-2 border-[#b084f7]/50 placeholder:text-white/70"
-                placeholder="First and last name"
+                className="w-full p-2 rounded-xl border-2 border-[#b084f7]/50 focus:ring-2 focus:ring-[#b084f7] focus:outline-none "
                 required
                 value={formData.name}
                 onChange={handleChange}
@@ -142,8 +141,7 @@ export const Signup = () => {
               <input
                 type="email"
                 name="email"
-                className="w-full p-2 rounded-xl border-2 border-[#b084f7]/50 placeholder:text-white/70"
-                placeholder="your.email@example.com"
+                className="w-full p-2 rounded-xl border-2 border-[#b084f7]/50 focus:ring-2 focus:ring-[#b084f7] focus:outline-none"
                 required
                 value={formData.email}
                 onChange={handleChange}
@@ -160,8 +158,7 @@ export const Signup = () => {
                 <input
                   type={showPassword ? "text" : "password"}
                   name="password"
-                  className="w-full p-2 rounded-xl border-2 border-[#b084f7]/50 placeholder:text-white/70"
-                  placeholder="At least 8 characters"
+                  className="w-full p-2 rounded-xl border-2 border-[#b084f7]/50 focus:ring-2 focus:ring-[#b084f7] focus:outline-none"
                   required
                   value={formData.password}
                   onChange={handleChange}
@@ -169,7 +166,7 @@ export const Signup = () => {
                 <button
                   type="button"
                   onClick={togglePasswordVisibility}
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#b084f7]"
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#b084f7] font-bold"
                   aria-label={showPassword ? "Hide password" : "Show password"}
                 >
                   {showPassword ? <FaRegEyeSlash /> : <FiEye />}
@@ -194,7 +191,7 @@ export const Signup = () => {
               <input
                 type="password"
                 name="confirmPassword"
-                className="w-full p-2 rounded-xl border-2 border-[#b084f7]/50 placeholder:text-white/70"
+                className="w-full p-2 rounded-xl border-2 border-[#b084f7]/50 focus:ring-2 focus:ring-[#b084f7] focus:outline-none"
                 required
                 value={formData.confirmPassword}
                 onChange={handleChange}
@@ -214,13 +211,13 @@ export const Signup = () => {
           </form>
 
           {/* Sign In Link */}
-          <div className="mt-4 flex items-center justify-center sm:justify-start">
+          <div className="mt-4 flex items-center justify-center sm:justify-start cursor-auto ">
             Already have an account?
             <Link
               to={routes.loginEmail}
-              className="text-[#b084f7] ml-2 flex items-center gap-1 hover:underline"
+              className="text-[#b084f7] ml-2 flex items-center gap-1 hover:underline  pointer-events-auto cursor-pointer"
             >
-              Sign in <RiArrowDropRightFill className="text-lg" />
+              Sign in
             </Link>
           </div>
         </div>
