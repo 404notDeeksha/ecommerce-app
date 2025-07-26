@@ -1,3 +1,10 @@
+### How Each of my action in project is improving end user expirence? 
+### How can it be Quantified/ measured?
+
+**Basics Measures**
+- page load speed 
+- user session duration
+
 # Mono Repo app
 
 - Setting up individual FE & BE repo to craete combined full stack app.
