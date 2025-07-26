@@ -88,13 +88,14 @@ so,
 - Still no request was crossing. Network tab had no https//api.mixpanel
 - $$ Opening in Incognito mode solved the issue
 
-- ***Time***:
+- ***TimeStamp***:
 - ***new Date().toISOString()*** gives universal time     <!-- 2025-07-26T08:44:10.123Z -->
 - 2025-07-26 → Date (YYYY-MM-DD)
 - T → Separator between date and time
 - 08:44:10.123 → Time (HH:mm:ss.sss)
 - Z → Indicates UTC time
-- 
+
+- Mixpanel uses time as $time mixpanel property & overrides it.
 
 
 
