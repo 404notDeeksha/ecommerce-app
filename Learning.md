@@ -99,6 +99,9 @@ so,
 
 - Mixpanel uses time as $time mixpanel property & overrides it.
 
+**Issues #10**
+- Tried Adding FUNNEL TRACKING, ended up adding custom event.
+- $ will track further to analyse data
 
 
 

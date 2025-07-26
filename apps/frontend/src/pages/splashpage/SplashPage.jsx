@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Squares from "../../utils/Squares";
 import { HeroTextCentered } from "../../utils/HeroTextCentered";
+import { trackEvent } from "../../lib/tracking";
 
 export const SplashPage = () => {
+  useEffect(() => {
+    trackEvent("Splash page viewed", {
+      page: window.location.pathname,
+      timestamp: new Date().toLocaleString("en-IN", {
+        timeZone: "Asia/Kolkata",
+      }),
+    });
+  }, []);
+
   return (
     <div className="relative h-screen  bg-[#1d1e2c] font-sans">
       <Squares
