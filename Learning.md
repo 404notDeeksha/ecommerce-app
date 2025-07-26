@@ -77,6 +77,8 @@ so,
 ***Signup Page***
 - Updated complete UI
 
+-------------------------------------------------------------------------------------------------------------
+
 ### Added Mixpanel tool 
 - track events like user actions, page reloads.
 
@@ -104,6 +106,8 @@ so,
 
 
 
+-------------------------------------------------------------------------------------------------------------
+
 ### Production Quirks
 
 **Loading .env file**:
@@ -115,6 +119,8 @@ so,
     ```
 - `.env` runs in all environments
 
+
+-------------------------------------------------------------------------------------------------------------
 
 ### How Each of my action in project is improving end user expirence? 
 ### How can it be Quantified/ measured?
@@ -134,6 +140,8 @@ so,
 **Tool used**
 -Mixpanel
 
+
+----------------------------------------------------------------------------
 ***Splash Page***
 1) Page Load Speed (target <2 seconds) 
 - Use `Google page insights` for deployed web pages
@@ -146,12 +154,9 @@ so,
 2) User Engagement:
 - CTA button (Get Started)
 
-
+----------------------------------------------------------------------------
 ***Signup Page***: Analytics:
 1. Page Load Speed : DOMContentLoaded: 244 ms, Load: 465 ms
-2.  
-
-
 2) User Engagement (session duration >30 seconds) 
 3) Click-through Rate on CTAs 
 4) Exit Rate 
