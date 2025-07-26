@@ -1,10 +1,3 @@
-### How Each of my action in project is improving end user expirence? 
-### How can it be Quantified/ measured?
-
-**Basics Measures**
-- page load speed 
-- user session duration
-
 # Mono Repo app
 
 - Setting up individual FE & BE repo to craete combined full stack app.
@@ -84,9 +77,81 @@ so,
 ***Signup Page***
 - Updated complete UI
 
+### Added Mixpanel tool 
+- track events like user actions, page reloads.
+
+**Issues#9**
+- Integrating mixpanel dashboard with project
+- Quite Complex.
+- Chrome browsers had blockers which werent allowing mixpanel tracker to send request to mixpanel dashboard.
+- $$ used ignore_dnt: true, to stop that .
+- Still no request was crossing. Network tab had no https//api.mixpanel
+- $$ Opening in Incognito mode solved the issue
+
+- ***Time***:
+- ***new Date().toISOString()*** gives universal time     <!-- 2025-07-26T08:44:10.123Z -->
+- 2025-07-26 → Date (YYYY-MM-DD)
+- T → Separator between date and time
+- 08:44:10.123 → Time (HH:mm:ss.sss)
+- Z → Indicates UTC time
+- 
 
 
 
 
 
 
+
+
+### Production Quirks
+
+**Loading .env file**:
+- Vite loads .env, .env.development, and .env.production files based on the --mode flag.
+- By default, it only uses .env
+    ```js
+    "start": "vite --mode development",
+    "build": "vite build --mode production",
+    ```
+- `.env` runs in all environments
+
+
+### How Each of my action in project is improving end user expirence? 
+### How can it be Quantified/ measured?
+
+### Metrics:
+
+**Tracking -> Basics Measures**
+- page load speed 
+- user session duration
+- user engagement (session duration, bounce rate), conversion rates, and specific events (button clicks, form submissions) to understand how changes impact user behavior.
+1) Page Load Speed 
+2) User Engagement (session duration, events) 
+3) Conversion Tracking (CTA clicks, form submissions) 
+4) User Flow Analysis (navigation paths) 
+5) Bounce Rate Monitoring. 
+
+**Tool used**
+-Mixpanel
+
+***Splash Page***
+1) Page Load Speed (target <2 seconds) 
+- Use `Google page insights` for deployed web pages
+- Used Network tab under Inspect
+
+***Analytics***
+- DOMContentLoaded: 137 ms 
+- Load: 354
+
+2) User Engagement:
+- CTA button (Get Started)
+
+
+***Signup Page***: Analytics:
+1. Page Load Speed : DOMContentLoaded: 244 ms, Load: 465 ms
+2.  
+
+
+2) User Engagement (session duration >30 seconds) 
+3) Click-through Rate on CTAs 
+4) Exit Rate 
+5) Heatmaps to analyze user interaction areas.

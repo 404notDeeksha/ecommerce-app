@@ -2,6 +2,7 @@ import React from "react";
 import DecryptedText from "../pages/homepage/components/DecryptedText";
 import { Link } from "react-router-dom";
 import { routes } from "../routes/routes";
+import { trackEvent } from "../lib/tracking";
 
 export function HeroTextCentered() {
   return (
@@ -26,6 +27,17 @@ export function HeroTextCentered() {
         <button
           className="px-5 py-2 rounded-full bg-white text-[#1d1e2c] font-semibold shadow hover:bg-gray-200 transition text-lg"
           aria-label="Get Started"
+          id="cta-splash"
+          onClick={() =>
+            trackEvent("Button Clicked", {
+              page: window.location.pathname,
+              label: "Hero Section",
+              buttonId: "cta-splash",
+              timestamp: new Date().toLocaleString("en-IN", {
+                timeZone: "Asia/Kolkata",
+              }),
+            })
+          }
         >
           <Link to={routes.signup}>Get Started</Link>
         </button>

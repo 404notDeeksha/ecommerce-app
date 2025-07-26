@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "vite",
-    "build": "vite build",
+    "start": "vite --mode development",
+    "build": "vite build --mode production",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview --mode production"
   },
   "dependencies": {
     "@mui/icons-material": "^5.15.20",
@@ -28,7 +28,7 @@
     "tailwind-gradient-mask-image": "^1.2.0",
     "uuid": "^10.0.0",
     "vercel": "^41.4.1",
-     "@emotion/react": "^11.14.0",
+    "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1"
   },
   "devDependencies": {

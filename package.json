@@ -12,6 +12,7 @@
     "dev:all": "npm-run-all -p start:backend start:frontend"
   },
   "dependencies": {
+    "mixpanel-browser": "^2.67.0",
     "ogl": "^1.0.11",
     "three": "^0.178.0"
   }
